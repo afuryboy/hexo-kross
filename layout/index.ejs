@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-11 mx-auto">
-          <h1 class="text-white font-tertiary"><%= config.homepage.banner.title || theme.homepage.banner.title%></h1>
+          <h1 class="text-white font-tertiary"><%= config.homepage.banner.title%></h1>
         </div>
       </div>
     </div>
@@ -38,14 +38,14 @@
   </section>
   <!-- /hero area -->
 
-<% if(config.homepage.about.enable || theme.homepage.about.enable) { %>
+<% if(config.homepage.about.enable) { %>
 <!-- about -->
 <section class="section">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
-        <p class="font-secondary lead text-dark"><%= config.homepage.about.content || theme.homepage.about.content %></p>
-        <% if(config.homepage.about.button.enable || theme.homepage.about.button.enable) { %>
+        <p class="font-secondary lead text-dark"><%= config.homepage.about.content%></p>
+        <% if(config.homepage.about.button.enable) { %>
           <a href="<%= config.homepage.about.button.url%>" class="btn btn-transparent"><%= config.homepage.about.button.label%></a>
         <% } %>
       </div>
@@ -55,13 +55,13 @@
 <!-- /about -->
 <% } %>
 
-<% if(config.homepage.skill.enable || theme.homepage.skill.enable) { %>
+<% if(config.homepage.skill.enable) { %>
 <!-- skills -->
 <section class="section">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-title"><%= config.homepage.skill.title || theme.homepage.skill.title%></h2>
+        <h2 class="section-title"><%= config.homepage.skill.title%></h2>
       </div>
       <% config.homepage.skill.item.forEach((item) => { %>
         <div class="col-lg-3 col-sm-6 mb-4">
@@ -127,7 +127,7 @@
 
 
 
-  <% if(config.homepage.team.enable || theme.homepage.team.enable) { %>
+  <% if(config.homepage.team.enable) { %>
   <!-- testimonial -->
   <section class="section bg-primary position-relative testimonial-bg-shapes">
     <div class="container">
